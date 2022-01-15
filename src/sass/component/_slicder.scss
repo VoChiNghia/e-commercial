@@ -1,0 +1,106 @@
+.slice{
+   
+    height:80vh;
+    max-height: 1000px;
+    background-color: rgb(216, 190, 135);
+   position: relative;
+   display: flex;
+   overflow: hidden;
+   
+   &__container{
+        width: 0;
+      padding-left:20px;
+       
+        position: relative;
+      margin: 0 auto;
+       @include flex( center, space-evenly);
+       visibility: hidden;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+       @include mobile{
+           padding: 0
+       }
+       &__info{
+           display: flex;
+           
+           flex-direction: column;
+            @include mobile{
+                font-size: 12px;
+                margin-left: 10px;
+            }
+          button{
+              width: 150px;
+              height:40px;
+              border-radius:30px;
+              background-color: #0e5ba4;
+              color: #fff;
+              border:none;
+              margin-top: 25px;
+              @include mobile{
+                width: 100px;
+                height:30px;
+                font-size: 12px;
+              }
+
+              &:hover{
+                  opacity: 0.8;
+              }
+          }
+       }
+       &__img{
+        img{
+            width: 400px;
+            @include mobile{
+                width: 230px;
+            }
+        }
+     }
+
+     
+   }
+   &__control{
+    position: absolute;
+   bottom: 0;
+   left: 50%;
+    transition: opacity 0.3s ease;
+    font-size:1.5rem;
+    margin-bottom: 25px;
+    transform: translateX(-50%);
+    .control-left{
+       
+        padding: 0 100px;
+        @include mobile{
+            left: 150px;
+            bottom: 0;
+            font-size: 1rem;
+            padding: 0 20px;
+        }
+    }
+   
+    .control-right{
+        padding: 0 100px;
+    
+       @include mobile{
+           right: 150px;
+           bottom: 0;
+           font-size: 1rem;
+           padding: 0 20px;
+       }
+   }
+
+}
+
+   &__container.active{
+   display:flex;
+   visibility: visible;
+   transform: translateY(0%);
+   width: 100%;
+   opacity: 1;
+   
+  }
+  &:hover &__container__control{
+      opacity: 1;
+  }
+}
+

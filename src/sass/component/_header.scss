@@ -1,0 +1,184 @@
+.header{
+    margin: 15px;
+    @include mobile{
+        width: 100%;
+        margin: 0 2px;
+        
+    }
+
+    
+    .nav-contact{
+        @include flex (center, space-between);
+        padding: 5px 0 15px 0;
+        border-bottom: 1px solid rgb(170, 169, 169);
+       @include mobile{
+        @include flex (center, center);
+        font-size: 0.7rem;
+       }
+     
+        &__left{
+            span{
+                margin-left:5px;
+            }
+            @include mobile{
+                display: none;
+            }
+        }
+    
+        &__right{
+            @include flex(center, unset);
+            
+            &__dropdown{
+                @include mobile{
+                    margin: 0 5px;
+                    padding: 0;
+                }
+                &:hover .language-dropdown{
+                     visibility:visible;
+                     opacity: 1;
+                   
+                   }
+
+                margin-right: 15px;
+                i{
+                    margin: 0 5px 0 5px;
+                }
+                &:hover span{
+                    color: #337ab7;
+                }
+               
+               
+               
+                .language-dropdown{
+                    &::before{
+                        content: " ";
+                        position: absolute;
+                        width: 100px;
+                        height: 10px;
+                        top: -10px;
+                        background-color: transparent;
+                        
+                    }
+                    margin-top: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    width: 123px;
+                   padding:5px;
+                    background-color: rgb(241, 241, 241);
+                    p{
+                        margin: 5px 0;
+                      &:hover {
+                          color: #337ab7;
+                      }
+                    }
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    
+                }
+            }
+            &__dropdown.currency {
+                @include mobile{
+                    display: none
+                }
+            }
+        }
+    
+    }
+
+    .nav-link{
+        @include flex(center, space-between);
+       z-index: 2;
+        padding:30px 0;
+        background-color: #fff;
+        width: 100%;
+        @include mobile{
+            padding:10px 0 ;
+           
+        }
+        &__logo{
+            margin: 0 10px;
+        }
+        &.shrink{
+            position:fixed;
+            top:0;
+            left:0;
+            padding: 30px  0;
+            animation: fade 0.3s ease;
+            @include mobile{
+                padding:10px 0;
+            }
+        }
+        &__menu{
+            display: none;
+        }
+       
+        @include tablet{
+            &__content{
+                display: none;
+            }
+            &__menu{
+                display: block;
+                margin-right: 10px;
+            }
+        }
+    &__content{
+        font-size:1.2rem;
+      a{
+        margin: 0 20px;
+
+      }
+
+      &__mobile{
+         display: none;
+          background-color: rgb(236, 233, 233);
+          
+          @include tablet{
+          
+            position:fixed;
+              width: 100%;
+              height: 100vh;
+              background-color:#fff;
+            display: flex;
+            flex-direction: column;
+            transform:translateX(-100%);
+            transition: transform 0.5s ease;
+            z-index: 2;
+           a{
+               padding:10px 5px;
+               border-bottom: 1px solid #ccc;
+
+           }
+        }
+      }
+      &__mobile.active{
+      
+        transform:translateX(0%);
+      }
+    }
+
+    &__right{
+        @include flex(center, unset);
+        font-size: 1.5rem;
+        &__icon{
+            margin:0 5px;
+            position:relative;
+        }
+        
+    }
+    }
+}
+
+@keyframes fade {
+    from { 
+        opacity:0;
+        transform: translateY(-100%);
+        background-color:transparent;
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+        background-color:#fff;
+    }
+}

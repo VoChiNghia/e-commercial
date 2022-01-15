@@ -1,0 +1,253 @@
+.container{
+ width: 100%;
+}
+.home{
+
+    @include mobile {
+        img{
+          width: 100%;
+        }
+    }
+    
+    .promotion-box{
+        border-bottom: 1px solid rgb(226, 226, 226);
+        box-shadow: 0px 2px 3px rgb(0 0 0 / 6%);
+        max-width: 1200px;
+        margin: 0 auto;
+        padding:50px;
+        &__container {
+            @include flex (center,center);
+            @include mobile {
+                flex-direction: column;
+               
+            }
+            &__item{
+                @include flex(center,center);
+                margin: 0 50px;
+                i{
+                    font-size:2rem;
+                    margin: 0 30px;
+                }
+                &__name {
+                    h3{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .subbaner-section{
+        @include flex(center,center);
+        flex-direction: column;
+        max-width:1200px;
+        margin:0 auto;
+        padding:50px 0;
+      &__container{
+           @include flex(center,center);
+           @include mobile {
+            flex-direction: column;
+        }
+        &__item{
+            position: relative;
+            margin: 0 22px;
+            @include tablet {
+                margin: 0 5px;
+            }
+         
+           .banner{
+             position: relative;
+            img{
+                width: 100%;
+            }
+            p{
+                font-size: 1.1rem;
+                width: 140px;
+                height: 40px;
+                position: absolute;
+                bottom: 0px;
+                margin: 0;
+                color: #333;
+                background-color: #fff;
+                line-height: 40px;
+                text-align: center;
+                left: 50%;
+              transform: translateX(-50%);
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 3px;
+               transform: scaleY(0);
+            }
+            
+            &:hover::after{
+                right: 0;
+                bottom: 3px;
+                top: 0;
+                left: 0;
+                transform: scaleY(1);
+                transition: all 0.5s ease;
+                background-color:rgba(0, 0, 0, 0.1)
+               
+            }
+            
+           }
+         
+           
+        }
+        
+      }
+    }
+    .product-item{
+      max-width: 1200px;
+     margin: auto;
+      padding: 20px 0 100px 0;
+      text-align: center;
+      @include mobile{
+        padding: 0px 0 20px 0;
+      }
+       &__name{
+        h3{
+            text-align: center;
+            font-size:2rem;
+            margin-bottom: 30px;
+        }
+        &__selection{
+            text-align: center;
+            margin: 20px 0;
+        }
+       }
+    }
+    .parallax-banner{
+        margin-bottom:50px;
+     &__bg{
+        background-image: url(../../acesse/images/parallax.jpg);
+        background-size: 100%;
+        padding:80px 0 ;
+        background-position: 50% 500px;
+       &__container{
+           max-width:1140px;
+           height: 420px;
+           margin:0 auto;
+           
+        &__content{
+            text-align:center;
+            background-color: #fff;
+            color: #333;
+            max-width: 635px;
+           margin-right: 20px;
+            padding:0 15px;
+            float: right;
+            box-sizing: border-box;
+            padding:50px 10px;
+            img{
+                padding-bottom: 20px;
+            }
+            p{
+                margin: 10px 0;
+            }
+            button{
+              margin-top: 20px;
+              width: 150px;
+              height:40px;
+              border-radius:30px;
+              background-color: #0e5ba4;
+              color: #fff;
+              border:none;
+              &:hover{
+                  background-color: #3073b3;
+              }
+            }
+        }
+       }
+     }
+    }
+
+    .customer{
+        width: 100%;
+        background-color: rgb(248, 248, 248);
+        color: #444;
+        padding:50px 0;
+        &__container{
+           max-width: 600px;
+           text-align: center;
+           margin: 0 auto;
+            h3{
+                margin: 30px 0;
+                font-size:1.5rem;
+             
+            }
+            img{
+                border-radius:50%;
+            }
+            p{
+                margin: 30px 0;
+            }
+            span{
+                font-weight: 600;
+            }
+        }
+    }
+
+  .post-section{
+      text-align: center;
+      h2{
+          margin-top:20px;
+      }
+    .post-wrap{
+        @include flex(center,center);
+        @include mobile{
+            flex-direction: column;
+        }
+        padding:20px 0;
+      .post{
+          max-width:350px;
+          margin: 0 20px;
+          
+          &__container{
+            border: 1px solid rgb(238, 238, 238);
+            margin: 20px 0;
+              img{
+                  width:100%;
+              }
+              &__info{
+                  text-align:left;
+                  padding: 10px;
+                  a{
+                     font-weight: 600;
+                  }
+                  p{
+                      margin:10px 0;
+                  }
+              }
+              &__content{
+                  display:flex;
+                 justify-content:space-evenly;
+                  border-top: 1px solid rgb(238, 238, 238);
+                  border-bottom: 1px solid rgb(238, 238, 238);
+                  padding: 20px;
+                  background-color:rgb(249, 249, 249);
+              }
+          }
+      }
+    }
+  }
+
+    .partners{
+        width: 100%;
+        background-color:rgb(248, 248, 248);
+        padding: 80px 0;
+        &__container{
+           text-align: center;
+            max-width:70%;
+            margin: 0 auto;
+            &__logo{
+              img{
+                margin: 0 7px;
+              }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.product{
+   
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto; 
+    .product-cart{
+     
+        @include mobile {
+            display: inline-grid;
+           grid-template-columns: auto; 
+        }
+        margin:0;
+        &__container{
+            margin:10px 20px;
+            width:255px;
+            
+            &__img{
+                position: relative;
+                overflow: hidden;
+                padding-top: 140%;
+                img{
+                    position: absolute;
+                  width: 100%;
+                    top:0;
+                    left: 50%;
+                   
+                    
+                    &:nth-child(1){
+                        transform: translateX(-50%) scale(1);
+                        transition: transform .5s ease;
+                    }
+                    &:nth-child(2){
+                        transform: translateX(-50%) scale(0);
+                    }
+                    
+                }
+               &:hover img {
+                &:nth-child(1){
+                    transform: translateY(-50%) scale(0);
+                }
+                 &:nth-child(2){
+                    transform: translateX(-50%) scale(1);
+                    transition: transform .5s ease;
+                }
+               }
+                &:hover button{
+                    opacity: 1;
+                  
+                }
+                button{
+                    $width-btn:225px;
+                    position: absolute;
+                    bottom: 40px;
+                    left: 15px;
+                    border:none;
+                    background-color: #333;
+                    color: #fff;
+                    width:$width-btn;
+                    height:45px;
+                    opacity: 0;
+                    
+                    transition:opacity 0.5s ease;
+
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+            &__info{
+               
+                text-align: center;
+              
+                p{
+                    font-weight: 600;
+                    color: #0e5ba4;
+                }
+            }
+        }
+    }
+}

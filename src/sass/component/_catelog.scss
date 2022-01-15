@@ -1,0 +1,111 @@
+.catelog{
+  
+ 
+    &__container{
+        max-width: 1200px;
+     display:grid;
+      grid-template-columns: 26% 74%;
+      margin: 0 auto;
+      padding: 50px 0;
+        @include mobile{
+            grid-template-columns:100%;
+        }
+        &__navigation{
+            padding:0 20px;
+            @include mobile {
+                display: none;
+            }
+        .navigation{
+            margin:20px 0;
+            @include flex(center, space-between);
+            &__left{
+                span{
+                    margin: 0 5px;
+                }
+            }
+        
+        }
+        }
+
+        &__content{
+            @include mobile {
+               width: 100%;
+            }
+            .content-name{
+                border-bottom: 1px solid rgb(228, 224, 224);
+                margin:20px;
+               h1{
+                  padding: 10px;
+               }
+              
+            }
+
+            .content-filter{
+                @include flex (center , space-between);
+                padding:10px 20px;
+               
+                &__icon{
+                    font-size:1.5rem;
+                   i{
+                       margin: 0 5px;
+                       &.active{
+                           color: rgb(24, 83, 211);
+                       }
+                   }
+                  
+                }
+                &__sort{
+                   @include flex(center,unset);
+                   p{
+                       font-size: 1.2rem;
+                       margin:0 10px;
+                       @include mobile{
+                           font-size: 1rem;
+                       }
+                   }
+
+                   select{
+                        border:1px solid rgb(219, 214, 214);
+                        padding:5px 15px;
+                        outline:none;
+                        color: #333;
+                   }
+                }
+
+            }
+           .content-product{
+               &__block{
+                   display: none;
+                   &.active{
+                       display: block;
+                   }
+
+                   @include mobile {
+                       text-align: center;
+                   }
+
+               }
+               &__list{
+                    display: none;
+                   
+                    &.active{
+                        display: block;
+                    }
+                    button{
+                        margin-top: 20px;
+                        border: none;
+                        background-color: rgb(42, 107, 230);
+                        color: #fff;
+                        padding:10px 20px;
+                        
+                    }
+               }
+               
+           }
+          
+        }
+    }
+
+    
+
+}

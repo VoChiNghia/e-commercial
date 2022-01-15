@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+html, body {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+}
+ul {
+   list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+    &:hover{
+        color: #337ab7;
+    }
+}
+p{
+    margin: 0;
+}
