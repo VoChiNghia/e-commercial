@@ -79,9 +79,9 @@ const Header:FC = props => {
                 <Link to="/">MEN</Link>
                 <Link to="/">WOMENS</Link>
                 <Link to="/catelog">SHOP</Link>
-                <Link to="/">OFFICE WEAR</Link>
-                <Link to="/catelog">PRODUCT</Link>
                 <Link to="/blog">BLOG</Link>
+                <Link to="/catelog">PRODUCT</Link>
+                <Link to="/cart">CART</Link>
               
             </div>
             

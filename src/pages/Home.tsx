@@ -12,9 +12,10 @@ import IProduct from '../interface/IProduct'
 import Post from '../component/Post'
 import post from '../acesse/fakeData/post'
 import IPost from '../interface/IPost'
+import Banner from '../acesse/images/banner.png'
 const Home: FC = props => {
   
-
+  document.title = 'Home'
 
  
     return (
@@ -25,7 +26,7 @@ const Home: FC = props => {
               // ))
               <Slice sliderData={sliderData}/>
           } */}
-          <img src="https://opencart.mahardhi.com/MT01/adi/image/cache/catalog/banners/main-banner1-1920x650.jpg" alt="" />
+          <img src={Banner} alt="" />
             <div className="promotion-box">
               <div className="promotion-box__container">
                 <div className="promotion-box__container__item">

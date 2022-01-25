@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux'
 import {addComma} from '../until/AddComma'
 
 const Detail = () => {
+    document.title = 'Detail'
    useEffect(() => {
     window.scrollTo(0, 0)
    }, [])

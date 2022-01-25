@@ -6,6 +6,7 @@ import { addComma } from '../until/AddComma'
 
 
 const Cart = () => {
+    document.title = 'Cart'
     interface IDataCart {
         slug:string
         size: string,

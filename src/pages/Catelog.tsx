@@ -8,6 +8,7 @@ import {lowToHigh,highToLow} from '../app/feature/filterProductSlice'
 import { RootState } from '../app/store'
 import ProductCartList from '../component/ProductCartList'
 const Catelog = () => {
+  document.title = 'Product'
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
