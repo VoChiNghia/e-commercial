@@ -45,5 +45,16 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+<<<<<<< HEAD
 
 
+=======
+## Preview
+
+![Screenshot (53)](https://user-images.githubusercontent.com/89630455/150938667-b6c5224e-b5b9-45f5-89e9-487621de6f2f.png)
+![Screenshot (57)](https://user-images.githubusercontent.com/89630455/150938717-72c80dff-d56c-4685-8274-71820105161e.png)
+![Screenshot (58)](https://user-images.githubusercontent.com/89630455/150938723-5b7ec0dc-91ab-41dd-884e-8a0da683f629.png)
+![Screenshot (54)](https://user-images.githubusercontent.com/89630455/150938726-5b847610-2284-4633-a5bb-21c874fe05a6.png)
+![Screenshot (55)](https://user-images.githubusercontent.com/89630455/150938733-caf3a90b-4f14-40bc-8a83-fd1857907a6f.png)
+![Screenshot (56)](https://user-images.githubusercontent.com/89630455/150938739-56faa032-416f-4921-8023-f6e678ee3837.png)
+>>>>>>> 1feef9ee937cf97e6b5cb2beaa0e5c48f978be1f
