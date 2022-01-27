@@ -1,0 +1,128 @@
+
+.loggin{
+    width:100vw;
+    height:100vh;
+    background-color: rgba(0,0,0,0.8);
+
+    &__container{
+
+        @include mobile{
+            margin: 0 20px;
+        }
+
+        @include flex(center,center);
+        position: relative;
+        max-width:800px;
+        top: 10%;
+        
+        
+        margin:auto;
+
+        &__info{
+            @include mobile{
+                display: none;
+            }
+            flex: 1;
+            font-size:2rem;
+            padding:20px 0;
+            color:#fff;
+        }
+        &__form{
+            border-radius: 8px;
+            overflow: hidden;
+            flex:1;
+            background-color:#fff;
+            text-align:center;
+            padding: 0 20px;
+            position: relative;
+            &__title{
+               
+                h3{
+                    font-size:1.8rem;
+                    margin:10px 0;
+                   
+                }
+                p{
+                    margin:10px 0;
+                }
+            }
+            &__input{
+                display: flex;
+                flex-direction: column;
+                &__group {
+                    input{
+                        border-radius: 8px;
+                        border:1px solid rgb(214, 214, 214);
+                        width: 100%;
+                        height: 100%;
+                        font-size: 1rem;
+                        line-height: 1.7rem;
+                        outline: none;
+                        padding: 17px  0 17px 5px;
+                        background: transparent;
+                        z-index: 1;
+                        margin: 10px 0;
+                      
+                    }
+                   
+
+                    .input-email.invalid {
+                        border-color: red;
+                        
+                    }
+                    .input-password.invalid {
+                        border-color: red;
+                    }
+                    .input-password-again.invalid {
+                        border-color: red;
+                    }
+                }
+                p{
+                    margin:10px 0;
+                }
+                button{
+                    background: #222;
+                    border: unset;
+                    color: #fff;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    outline: none;
+                    padding: 17px  0 17px 5px;
+                    font-size: 1.4rem;
+                    line-height: 1.8rem;
+                }
+
+                &__icon {
+                    font-size: 3rem;
+                    margin:15px 0;
+                    i{
+                        margin: 0 15px;
+                        
+                    }
+                    i:nth-child(1){
+                        color:#4d8cc7
+                    }
+                    i:nth-child(2){
+                        color:#de5246;
+                    }
+                    i:nth-child(3){
+                        color:rgb(16, 127, 231);
+                    }
+                }
+            }
+            
+        }
+
+        &__bottom{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            padding:16px 0;
+            margin:0;
+            width:100%;
+            background-color:#e9e9e9;
+          
+        }
+    }
+}

@@ -2,9 +2,12 @@
     background-color:#444444;
    
     &__container{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
       
         @include mobile{
-            flex-direction: column;
+           display: flex;
+           flex-direction: column;
         }
         max-width:90%;
         padding: 50px 0;

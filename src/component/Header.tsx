@@ -40,6 +40,12 @@ const Header:FC = props => {
             <i className="fas fa-user"></i>
             <span>My Account</span>
             <i className="fas fa-angle-down"></i>
+
+            <div className="language-dropdown">
+             <Link to="/loggin"> <p>Sign In</p></Link>
+             <Link to="/register"> <p>Sign Up</p></Link>
+              
+            </div>
             </div>
 
             <div className="nav-contact__right__dropdown currency">
@@ -76,8 +82,8 @@ const Header:FC = props => {
             </div>
             <div className="nav-link__content">
                 <Link to="/">HOME</Link>
-                <Link to="/">MEN</Link>
-                <Link to="/">WOMENS</Link>
+                <Link to="/catelog">MEN</Link>
+                <Link to="/catelog">WOMENS</Link>
                 <Link to="/catelog">SHOP</Link>
                 <Link to="/blog">BLOG</Link>
                 <Link to="/catelog">PRODUCT</Link>
