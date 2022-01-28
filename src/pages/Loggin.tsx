@@ -12,8 +12,8 @@ const Loggin = () => {
             error:'.error',
             rule:[
                 validator.isEmail(".input-email"),
+                validator.isPassword(".input-password", 6),
                
-                validator.isPassword(".input-password")
             ]
         })
     },[])

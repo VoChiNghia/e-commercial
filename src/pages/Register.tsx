@@ -13,8 +13,11 @@ const Register = () => {
             error:'.error',
             rule:[
                 validator.isEmail(".input-email"),
-                validator.isPassword(".input-password"),
-                validator.isPassword(".input-password-again"),
+                validator.isPassword(".input-password", 6),
+                validator.isConfirm(".input-password-again",() => {
+                    const value = document.querySelector('.input-password')
+                    return value
+                }),
               
             ]
         })

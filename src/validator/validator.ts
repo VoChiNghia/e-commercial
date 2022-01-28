@@ -18,12 +18,18 @@ const validator = (selector:any) => {
     if(form) {
         selector.rule.forEach((rule:any) => {
             const inputElement = document.querySelector(rule.selector)
+            const errorElement = inputElement.parentElement.querySelector(selector.error)
             
             if(inputElement) {
                 inputElement.onblur = () => {
                     const error = rule.test(inputElement.value)
                     
+                    
                    isEmail(inputElement,error)
+                }
+                inputElement.oninput = () => {
+                    errorElement.innerHTML = ''
+                    inputElement.classList.remove('invalid')
                 }
             }
         })
@@ -51,14 +57,26 @@ validator.isEmail = (selector:any) => {
    return email
 
 }
-validator.isPassword = (selector:any) => {
+validator.isPassword = (selector:any, min:number) => {
     const password = {
         selector: selector,
         test: (value:any) => {
-            return value.trim() ? undefined : "required"
+            return value.length >= min ? undefined : "password greater than 6 letter"
         }
     }
  
+    return password
+    
+}
+
+validator.isConfirm = (selector:any, getPassword:any) => {
+    const password = {
+        selector: selector,
+        test: (value:any) => {
+            return value === getPassword().value ? undefined : "input incorrect"
+        }
+    }
+    
     return password
     
 }
