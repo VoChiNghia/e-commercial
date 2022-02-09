@@ -98,9 +98,9 @@ const Header:FC = props => {
                <img src="https://opencart.mahardhi.com/MT01/adi/image/catalog/logo.png" alt="" />
             </div>
             <div className="nav-link__content">
-                <Link to="/">HOME</Link>
-                <Link to="/catelog">MEN</Link>
-                <Link to="/catelog">WOMENS</Link>
+                <Link  to="/">HOME</Link>
+                <Link style={{color: "rgb(238, 227, 227)",cursor:"not-allowed"}} to="/catelog">MEN</Link>
+                <Link style={{color: "rgb(238, 227, 227)",cursor:"not-allowed"}} to="/catelog">WOMENS</Link>
                 <Link to="/catelog">SHOP</Link>
                 <Link to="/blog">BLOG</Link>
                 <Link to="/catelog">PRODUCT</Link>
