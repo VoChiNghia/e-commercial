@@ -56,6 +56,7 @@ const Detail = () => {
         dispatch(addToCart(action))
          
         alert("success")
+        history.push('/cart')
        }
     }
 
