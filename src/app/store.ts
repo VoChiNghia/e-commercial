@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import filterProductSlice  from "./feature/filterProductSlice";
 import cartSlice from "./feature/cartSlice";
+import profile from "./feature/profile";
 export const store = configureStore({
     reducer: {
         filterSort: filterProductSlice,
-        cartSlice: cartSlice
+        cartSlice: cartSlice,
+        profile:profile,
 
     },
 }) 

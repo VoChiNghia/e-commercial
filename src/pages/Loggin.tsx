@@ -1,22 +1,18 @@
 import React, { FC, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import validator from '../validator/validator'
+import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+
+
+
 
 
 const Loggin = () => {
     document.title = 'Loggin'
 
-    useEffect(() => {
-        validator({
-            class:'.loggin__container__form__input__group',
-            error:'.error',
-            rule:[
-                validator.isEmail(".input-email"),
-                validator.isPassword(".input-password", 6),
-               
-            ]
-        })
-    },[])
+   
 
   return(
   <div className="loggin">
@@ -54,9 +50,9 @@ const Loggin = () => {
                 <button>Loggin</button>
                 <p>or</p>
                 <div className='loggin__container__form__input__icon'>
-                <i className="fab fa-facebook"></i>
-                <i className="fab fa-google"></i>
-                <i className="fab fa-twitter"></i>
+                <i className="fa-brands fa-google"></i>
+                <i className="fa-brands fa-facebook-f"></i>
+              
                 </div>
                 <p>Bằng cách tiếp tục bạn đã Đồng ý với <strong>Điều khoản dịch vụ</strong> và
                  <strong> Chính sách bảo mật</strong></p>

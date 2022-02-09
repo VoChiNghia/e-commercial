@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from './component/Layout';
 
 
 function App() {
+ 
+
   return (
    <Layout/>
   );

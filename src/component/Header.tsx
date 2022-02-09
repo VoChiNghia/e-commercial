@@ -1,8 +1,16 @@
 import React,{FC, useEffect, useRef} from 'react'
+import { useSelector } from 'react-redux'
 import {Link} from 'react-router-dom'
+import { RootState } from '../app/store'
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth'
 
 const Header:FC = props => {
     document.title = 'Home'
+
+    const profileData = useSelector((state:RootState) => state.profile.value)
+
+    
     const menuRef = useRef<HTMLDivElement>(null)  
     const headerRef = useRef<HTMLDivElement>(null)  
     const handleMenuClick = (): void => {
@@ -36,17 +44,26 @@ const Header:FC = props => {
           <span>Free Support: 123456789</span>
           </div>
           <div className="nav-contact__right">
-            <div className="nav-contact__right__dropdown account">
-            <i className="fas fa-user"></i>
-            <span>My Account</span>
-            <i className="fas fa-angle-down"></i>
-
-            <div className="language-dropdown">
-             <Link to="/loggin"> <p>Sign In</p></Link>
-             <Link to="/register"> <p>Sign Up</p></Link>
-              
-            </div>
-            </div>
+           {
+             profileData ?
+             
+             <div className="nav-contact__right__profile">
+               <img src={profileData.photo} alt="" />
+               
+             </div> : 
+             
+             <div className="nav-contact__right__dropdown account">
+             <i className="fas fa-user"></i>
+             <span>My Account</span>
+             <i className="fas fa-angle-down"></i>
+ 
+             <div className="language-dropdown">
+              <Link to="/loggin"> <p>Sign In</p></Link>
+              <Link to="/register"> <p>Sign Up</p></Link>
+               
+             </div>
+             </div>
+           }
 
             <div className="nav-contact__right__dropdown currency">
             <i className="fas fa-dollar-sign"></i>
