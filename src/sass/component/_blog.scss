@@ -1,4 +1,9 @@
 .blog{
+
+    @include mobile{
+       display: none;
+        
+    }
     &__container{
        
 
