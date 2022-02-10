@@ -125,8 +125,8 @@ const Header:FC = props => {
 
         <div ref={menuRef} className="nav-link__content__mobile">
                 <Link onClick={menuToggle} to="/">HOME</Link>
-                <Link onClick={menuToggle} to="/">MEN</Link>
-                <Link onClick={menuToggle} to="/">WOMENS</Link>
+                <Link style={{color: "rgb(238, 227, 227)",cursor:"not-allowed"}} to="/catelog">MEN</Link>
+                <Link style={{color: "rgb(238, 227, 227)",cursor:"not-allowed"}} to="/catelog">WOMENS</Link>
                 <Link onClick={menuToggle} to="/catelog">SHOP</Link>
                 <Link onClick={menuToggle} to="/">OFFICE WEAR</Link>
                 <Link onClick={menuToggle} to="/catelog">PRODUCT</Link>
